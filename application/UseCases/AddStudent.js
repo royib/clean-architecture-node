@@ -1,6 +1,6 @@
 const Student = require('../../entities/Student');
 
-module.exports = (StudentRepository) => {
+module.exports = (StudentRepository, CrmServices) => {
 
     async function Execute(firstName, lastName, email) {
         const student = await StudentRepository.getByEmail(email);
@@ -15,12 +15,18 @@ module.exports = (StudentRepository) => {
                 reject(new Error('email already exist in the system'));
                 return;
             }
+            // create new student object
             const newStudent = new Student(firstName, lastName, email);
-            StudentRepository.add(newStudent).then((response) => {
-                resolve(response);
-            }, (err) => {
-                reject(err);
-            });
+            resolve(newStudent);
+
+        }).then((newStudent) => {
+            // persist student
+            return StudentRepository.add(newStudent);
+        }).then((newStudent) => {
+            // notify crm system
+            return CrmServices.notify(newStudent);
+        }).then(() => {
+            return Promise.resolve('student added successfully');
         });
     }
     return {

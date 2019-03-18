@@ -40,3 +40,9 @@
 {"message":"500 - validation failed: user already registered to this course - /api/students/enrollment/2 - GET - ::1","level":"error"}
 {"message":"500 - validation failed: user already registered to this course - /api/students/enrollment/2 - POST - ::1","level":"error"}
 {"message":"500 - validation failed: user already registered to this course - /api/students/enrollment/2 - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - undefined - /api/students - POST - ::1","level":"error"}
+{"message":"500 - external crm system was notified - /api/students - POST - ::ffff:127.0.0.1","level":"error"}
+{"message":"500 - external crm system was notified - /api/students - POST - ::ffff:127.0.0.1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::ffff:127.0.0.1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}

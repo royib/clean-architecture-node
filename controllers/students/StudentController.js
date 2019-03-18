@@ -6,10 +6,11 @@ const AddEnrollment = require('../../application/UseCases/AddEnrollment');
 module.exports = (dependecies) => {
 
     const { studentRepository } = dependecies.DatabaseService;
+    const { CrmServices } = dependecies;
 
     const addNewStudent = (req, res, next) => {
         // init use case
-        const AddStudentCommand = AddStudent(studentRepository);
+        const AddStudentCommand = AddStudent(studentRepository, CrmServices);
 
         // call use case
         AddStudentCommand.Execute(req.body.firstName, req.body.lastName, req.body.email).then((response) => {

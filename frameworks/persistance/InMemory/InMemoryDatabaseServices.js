@@ -1,4 +1,4 @@
-const DatabaseServices = require('../../../application/interfaces/DatabaseServices');
+const DatabaseServices = require('../../../application/contracts/DatabaseServices');
 const InMemoryStudentRepository = require('./InMemoryStudentRepository');
 const Student = require('../../../entities/Student');
 
