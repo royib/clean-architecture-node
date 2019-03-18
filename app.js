@@ -1,18 +1,11 @@
 const express = require('express');
-// const morgan = require('morgan');
-// const winston = require('./config/winston');
 const bodyParser = require('body-parser');
-const routes = require('./routes');
+const routes = require('./frameworks/web/routes');
 const projectDependencies = require('./config/projectDependencies');
-
-const ErrorHandler = require('./common/ErrorHandler');
+const ErrorHandler = require('./frameworks/common/ErrorHandler');
 
 const app = express();
-
 const port = process.env.PORT || 3000;
-
-// log all requests to morgan
-// app.use(morgan('combined', { stream: winston.stream }));
 
 // load app only if db is alive and kicking
 projectDependencies.DatabaseService.initDatabase().then(() => {

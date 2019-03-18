@@ -1,5 +1,4 @@
-const InMemoryDatabaseServices = require('../persistance/InMemory/InMemoryDatabaseServices');
-
+const InMemoryDatabaseServices = require('../frameworks/persistance/InMemory/InMemoryDatabaseServices');
 
 module.exports = (() => {
     return {

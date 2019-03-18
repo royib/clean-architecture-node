@@ -1,6 +1,6 @@
-const DatabaseServices = require('../../application/interfaces/DatabaseServices');
+const DatabaseServices = require('../../../application/interfaces/DatabaseServices');
 const InMemoryStudentRepository = require('./InMemoryStudentRepository');
-const Student = require('../../entities/Student');
+const Student = require('../../../entities/Student');
 
 module.exports = class InMemoryDatabaseServices extends DatabaseServices {
     constructor() {

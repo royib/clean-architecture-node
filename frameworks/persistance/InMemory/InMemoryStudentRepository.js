@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable arrow-body-style */
-const StudentRepository = require('../../application/interfaces/StudentRepository');
+const StudentRepository = require('../../../application/interfaces/StudentRepository');
 
 module.exports = class InMemoryStudentRepository extends StudentRepository {
 

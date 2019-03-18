@@ -1,5 +1,5 @@
 const express = require('express');
-const StudentController = require('../controllers/students/StudentController');
+const StudentController = require('../../../controllers/students/StudentController');
 
 // address - api/students
 // load dependencies

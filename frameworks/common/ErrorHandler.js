@@ -1,4 +1,4 @@
-const winston = require('../config/winston');
+const winston = require('./winston');
 
 const ErrorHandler = (err, req, res, next) => {
     // set locals, only providing error in development
