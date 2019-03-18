@@ -1,0 +1,40 @@
+{
+    "name": "cleanarc",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint ./",
+        "start": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "app-root-path": "^2.1.0",
+        "body-parser": "^1.18.3",
+        "elasticsearch": "^15.4.1",
+        "express": "^4.16.4",
+        "joi": "^14.3.1",
+        "morgan": "^1.9.1",
+        "nodemon": "^1.18.9",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^5.13.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.16.0"
+    },
+    "nodemonConfig": {
+        "restartable": "rs",
+        "ignore": [
+            "node_modules/**/node_modules"
+        ],
+        "delay": "2500",
+        "env": {
+            "NODE_ENV": "development",
+            "PORT": 4000,
+            "elasticSearchHost": "http://localhost:9200"
+        }
+    }
+}

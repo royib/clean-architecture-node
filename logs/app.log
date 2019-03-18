@@ -1,0 +1,42 @@
+{"message":"500 - Cannot read property 'StudentRepository' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'StudentRepository' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'StudentRepository' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'StudentRepository' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'StudentRepository' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'getAll' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - student does not exist - /api/students - POST - ::1","level":"error"}
+{"message":"500 - student does not exist - /api/students - POST - ::1","level":"error"}
+{"message":"500 - student does not exist - /api/students - POST - ::1","level":"error"}
+{"message":"500 - student does not exist - /api/students - POST - ::1","level":"error"}
+{"message":"500 - undefined - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - Cannot read property 'Execute' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'Execute' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'Execute' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'Execute' of undefined - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - GetAllStudentsQuery.Execute is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - a is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - a is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - a is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - a is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - a is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - a is not a function - /api/students - GET - ::1","level":"error"}
+{"message":"500 - email already exist in the system - /api/students - POST - ::1","level":"error"}
+{"message":"500 - validation failed - /api/students/enrollment/2 - GET - ::1","level":"error"}
+{"message":"500 - Cannot read property 'id' of undefined - /api/students/enrollment/2 - GET - ::ffff:127.0.0.1","level":"error"}
+{"message":"500 - Cannot read property 'id' of undefined - /api/students/enrollment/2 - GET - ::1","level":"error"}
+{"message":"500 - validation failed: user already registered to this course - /api/students/enrollment/2 - GET - ::1","level":"error"}
+{"message":"500 - validation failed: user already registered to this course - /api/students/enrollment/2 - POST - ::1","level":"error"}
+{"message":"500 - validation failed: user already registered to this course - /api/students/enrollment/2 - POST - ::1","level":"error"}
