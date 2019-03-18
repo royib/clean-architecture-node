@@ -6,5 +6,4 @@ module.exports = class CrmServices {
             reject(new Error('not implemented'));
         });
     }
-
 };
