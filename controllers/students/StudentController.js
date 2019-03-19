@@ -11,9 +11,10 @@ module.exports = (dependecies) => {
     const addNewStudent = (req, res, next) => {
         // init use case
         const AddStudentCommand = AddStudent(studentRepository, CrmServices);
-
+        // extract student properties
+        const { firstName, lastName, email } = req.body;
         // call use case
-        AddStudentCommand.Execute(req.body.firstName, req.body.lastName, req.body.email).then((response) => {
+        AddStudentCommand.Execute(firstName, lastName, email).then((response) => {
             res.json(response);
         }, (err) => {
             next(err);
