@@ -1,7 +1,7 @@
-const AddStudent = require('../../application/UseCases/AddStudent');
-const GetAllStudents = require('../../application/UseCases/GetAllStudents');
-const GetStudent = require('../../application/UseCases/GetStudent');
-const AddEnrollment = require('../../application/UseCases/AddEnrollment');
+const AddStudent = require('../../application/use_cases/AddStudent');
+const GetAllStudents = require('../../application/use_cases/GetAllStudents');
+const GetStudent = require('../../application/use_cases/GetStudent');
+const AddEnrollment = require('../../application/use_cases/AddEnrollment');
 
 module.exports = (dependecies) => {
 
