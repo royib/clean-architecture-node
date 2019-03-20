@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "lint": "eslint ./",
-        "start": "nodemon app.js",
+        "start": "nodemon src/app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
@@ -33,8 +33,7 @@
         "delay": "2500",
         "env": {
             "NODE_ENV": "development",
-            "PORT": 4000,
-            "elasticSearchHost": "http://localhost:9200"
+            "PORT": 4000
         }
     }
 }
