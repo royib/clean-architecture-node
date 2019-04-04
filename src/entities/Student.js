@@ -3,6 +3,7 @@ module.exports = class Student {
         this.id = null;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.fullName = `${firstName} ${lastName}`;
         this.email = email;
         this.enrollments = enrollments;
     }
