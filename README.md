@@ -36,7 +36,7 @@ into one main architecture. It aims to achieve good separation of concerns. Like
 most architecture, it also aims to make the application more flexible to
 inevitable changes in client requirements (which always happens).
 
-![](media/d606470a2e27b4e1b3dd0b482d5697c7.png)
+![](https://fullstackroyhome.files.wordpress.com/2019/03/cleanarchitecture.jpg)
 
 clean architecture diagram - dependencies direction are from outside in.
 [source](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
