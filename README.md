@@ -105,7 +105,8 @@ explore the code while reading the articles.
 
 The series includes these articles:
 
--   Node clean architecture - Overview
+-   Node clean architecture -
+    [Overview](https://fullstackroy.home.blog/2019/03/21/the-journey-begins/)
 
 -   Node clean architecture - *Entities and use cases*
 
