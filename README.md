@@ -2,8 +2,6 @@
 Node Clean Architecture
 =======================
 
-Written by royi benita
-
 Overview
 ========
 
