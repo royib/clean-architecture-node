@@ -106,10 +106,10 @@ explore the code while reading the articles.
 The series includes these articles:
 
 -   Node clean architecture -
-    [Overview](https://fullstackroy.home.blog/2019/03/21/the-journey-begins/)
+    [Overview](https://roystack.home.blog/2019/03/21/the-journey-begins/)
 
--   Node clean architecture - [Entities and use cases](https://fullstackroy.home.blog/2019/03/21/core-layers-entities-and-use-cases/)
+-   Node clean architecture - [Entities and use cases](https://roystack.home.blog/2019/03/21/core-layers-entities-and-use-cases/)
 
--   Node clean architecture - [Controllers and Presenters](https://fullstackroy.home.blog/2019/03/21/controllers-and-presenters/)
+-   Node clean architecture - [Controllers and Presenters](https://roystack.home.blog/2019/03/21/controllers-and-presenters/)
 
--   Node clean architecture - [Frameworks](https://fullstackroy.home.blog/2019/03/21/frameworks/)
+-   Node clean architecture - [Frameworks](https://roystack.home.blog/2019/03/21/frameworks/)
