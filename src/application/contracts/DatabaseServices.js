@@ -6,9 +6,7 @@ module.exports = class DatabaseServices {
     }
 
     initDatabase() {
-        return new Promise((resolve, reject) => {
-            reject(new Error('not implemented'));
-        });
+        return Promise.reject(new Error('not implemented'));
     }
 
 };
