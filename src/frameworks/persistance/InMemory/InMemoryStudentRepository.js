@@ -10,93 +10,86 @@ module.exports = class InMemoryStudentRepository extends StudentRepository {
         this.currentId = 1;
     }
 
-    add(studentInstance) {
-        return new Promise((resolve, reject) => {
-            try {
-                this.currentId = this.currentId + 1;
-                studentInstance.id = this.currentId;
-                this.students.push(studentInstance);
-                resolve(studentInstance);
-            } catch (error) {
-                reject(new Error('Error Occurred'));
-            }
-        });
+    async add(studentInstance) {
+        try {
+            this.currentId = this.currentId + 1;
+            studentInstance.id = this.currentId;
+            this.students.push(studentInstance);
+        } catch (error) {
+            throw new Error('Error Occurred');
+        }
+
+        return studentInstance;
     }
 
-    update(studentInstance) {
-        return new Promise((resolve, reject) => {
-            try {
-                const student = this.students.find(x => x.id === studentInstance.id);
-                if (student) {
-                    Object.assign(student, { studentInstance });
-                }
-                resolve(student);
-            } catch (error) {
-                reject(new Error('Error Occurred'));
+    async update(studentInstance) {
+        let student;
+        try {
+            student = this.students.find(x => x.id === studentInstance.id);
+            if (student) {
+                Object.assign(student, { studentInstance });
             }
-        });
+
+        } catch (error) {
+            throw new Error('Error Occurred');
+        }
+
+        return student;
     }
 
-    delete(studentId) {
-        return new Promise((resolve, reject) => {
-            try {
-                const studentIndex = this.students.findIndex(x => x.id === studentId);
-                if (studentIndex !== -1) {
-                    this.students.splice(studentIndex, 1);
-                }
-                resolve(true);
-            } catch (error) {
-                reject(new Error('Error Occurred'));
+    async delete(studentId) {
+        try {
+            const studentIndex = this.students.findIndex(x => x.id === studentId);
+            if (studentIndex !== -1) {
+                this.students.splice(studentIndex, 1);
             }
-        });
+        } catch (error) {
+            throw new Error('Error Occurred');
+        }
+
+        return true;
     }
 
-    getById(studentId) {
-        return new Promise((resolve, reject) => {
-            try {
-                const id = parseInt(studentId);
-                const student = this.students.find(x => x.id === id);
-                resolve(student);
-            } catch (err) {
-                reject(new Error('Error Occurred'));
-            }
-        });
+    async getById(studentId) {
+        let student;
+        try {
+            const id = parseInt(studentId);
+            student = this.students.find(x => x.id === id);
+        } catch (err) {
+            throw new Error('Error Occurred');
+        }
+
+        return student;
     }
 
-    getByEmail(studentEmail) {
-        return new Promise((resolve, reject) => {
-            try {
-                const student = this.students.find(x => x.email === studentEmail);
-                resolve(student);
-            } catch (err) {
-                reject(new Error('Error Occurred'));
-            }
-        });
+    async getByEmail(studentEmail) {
+        let student;
+        try {
+            student = this.students.find(x => x.email === studentEmail);
+        } catch (err) {
+            throw new Error('Error Occurred');
+        }
+
+        return student;
     }
 
-    getAll() {
-        return new Promise((resolve, reject) => {
-            resolve(this.students);
-        });
+    async getAll() {
+        return this.students;
     }
 
-    addEnrollment(studentId, enrollment) {
-        return new Promise((resolve, reject) => {
-            try {
-                const id = parseInt(studentId);
-                const student = this.students.find(x => x.id === id);
-                if (student) {
-                    if (!student.enrollments) {
-                        student.enrollments = [];
-                    }
-                    student.enrollments.push(enrollment);
-                    resolve(student);
-                } else {
-                    reject(new Error('student does not exist'));
-                }
-            } catch (error) {
-                reject(error);
-            }
-        });
+    async addEnrollment(studentId, enrollment) {
+        const id = parseInt(studentId);
+        const student = this.students.find(x => x.id === id);
+
+        if (!student) {
+            throw new Error('student does not exist');
+        }
+
+        if (!student.enrollments) {
+            student.enrollments = [];
+        }
+        student.enrollments.push(enrollment);
+
+        return student;
     }
 };
