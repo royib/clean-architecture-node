@@ -8,15 +8,8 @@ module.exports = class InMemoryDatabaseServices extends DatabaseServices {
         this.studentRepository = new InMemoryStudentRepository();
     }
 
-    initDatabase() {
-        return new Promise((resolve, reject) => {
-            try {
-                this.seedData();
-                resolve();
-            } catch (err) {
-                reject(err);
-            }
-        });
+    async initDatabase() {
+        this.seedData();
     }
 
     async seedData() {
