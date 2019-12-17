@@ -3,34 +3,28 @@ const Student = require('../../entities/Student');
 module.exports = (StudentRepository, CrmServices) => {
 
     async function Execute(firstName, lastName, email) {
-        return StudentRepository.getByEmail(email)
-            .then((student) => {
-                return new Promise((resolve, reject) => {
-                    // validate
-                    if (!firstName || !lastName || !email) {
-                        reject(new Error('validation failed'));
-                        return;
-                    }
-                    // check if student exist by email
-                    if (student) {
-                        reject(new Error('email already exist in the system'));
-                        return;
-                    }
-                    // create new student object
-                    const newStudent = new Student(firstName, lastName, email);
-                    resolve(newStudent);
+        const student = await StudentRepository.getByEmail(email);
 
-                }).then((newStudent) => {
-                    // persist student
-                    return StudentRepository.add(newStudent);
-                }).then((newStudent) => {
-                    // notify crm system
-                    return CrmServices.notify(newStudent);
-                }).then(() => {
-                    return Promise.resolve('student added successfully');
-                });
-            });
+        // validate
+        if (!firstName || !lastName || !email) {
+            throw new Error('validation failed');
+        }
 
+        // check if student exist by email
+        if (student) {
+            throw new Error('email already exist in the system');
+        }
+
+        // create new student object
+        let newStudent = new Student(firstName, lastName, email);
+
+        // persist student
+        newStudent = await StudentRepository.add(newStudent);
+
+        // notify crm system
+        await CrmServices.notify(newStudent);
+
+        return 'student added successfully';
     }
     return {
         Execute
