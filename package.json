@@ -14,7 +14,7 @@
         "app-root-path": "^2.1.0",
         "body-parser": "^1.18.3",
         "elasticsearch": "^15.4.1",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "joi": "^14.3.1",
         "morgan": "^1.9.1",
         "nodemon": "^1.18.9",
