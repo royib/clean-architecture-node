@@ -3,10 +3,10 @@ const GetAllStudents = require('../../application/use_cases/GetAllStudents');
 const GetStudent = require('../../application/use_cases/GetStudent');
 const AddEnrollment = require('../../application/use_cases/AddEnrollment');
 
-module.exports = (dependecies) => {
+module.exports = (dependencies) => {
 
-    const { studentRepository } = dependecies.DatabaseService;
-    const { CrmServices } = dependecies;
+    const { studentRepository } = dependencies.DatabaseService;
+    const { CrmServices } = dependencies;
 
     const addNewStudent = (req, res, next) => {
         // init use case
